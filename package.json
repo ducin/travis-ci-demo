@@ -1,9 +1,11 @@
 {
   "scripts": {
-    "test": "jasmine-node spec"
+    "test": "nyc jasmine-node spec",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
     "jasmine": "^3.4.0",
-    "jasmine-node": "^3.0.0"
+    "jasmine-node": "^3.0.0",
+    "nyc": "^14.1.1"
   }
 }
